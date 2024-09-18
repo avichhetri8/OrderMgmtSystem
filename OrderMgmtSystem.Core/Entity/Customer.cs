@@ -18,8 +18,8 @@ namespace OrderMgmtSystem.Core.Entity
 
         public required string LastName { get; set; }
         public required string Email { get; set; }
-        public required string ContactNmber { get; set; }
-        public int IsDelted { get; set; }
+        public required string ContactNumber { get; set; }
+        public bool IsDeleted { get; set; }
 
         public ICollection<Order>? Orders { get; set; }
     }

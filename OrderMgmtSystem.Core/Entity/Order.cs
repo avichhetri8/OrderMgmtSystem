@@ -1,9 +1,13 @@
 ﻿using OrderMgmtSystem.Core.Enums;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace OrderMgmtSystem.Core.Entity
 {
     public class Order
     {
+        [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
 
         public Guid CustomerId { get; set; }
@@ -12,12 +16,11 @@ namespace OrderMgmtSystem.Core.Entity
         public DateTimeOffset OrderDate { get; set; }
         public decimal TotalAmount { get; set; }
         public decimal DepositAmount { get; set; }
-        public int IsDelivery { get; set; }
-        public int Status { get; set; }
+        public bool IsDelivery { get; set; }
         public string? OtherNotes { get; set; }
-        public int IsDeleted { get; set; }
+        public bool IsDeleted { get; set; }
 
-        public required Customer Customer { get; set; }
+        public Customer Customer { get; set; }
 
         public Status status { get; set; }  
 

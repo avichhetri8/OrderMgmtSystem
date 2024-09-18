@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderMgmtSystem.Server", "O
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ordermgmtsystem.client", "ordermgmtsystem.client\ordermgmtsystem.client.esproj", "{67EA6A38-824C-4D74-859B-A13641FF6CB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderMgmtSystem.Core", "OrderMgmtSystem.Core\OrderMgmtSystem.Core.csproj", "{AADF793B-6996-4E10-81A6-62BE55EF6D88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderMgmtSystem.Infrastructure", "OrderMgmtSystem.Infrastructure\OrderMgmtSystem.Infrastructure.csproj", "{68807B46-18EB-49EA-8B78-94C67A8C0F59}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,14 @@ Global
 		{67EA6A38-824C-4D74-859B-A13641FF6CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67EA6A38-824C-4D74-859B-A13641FF6CB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67EA6A38-824C-4D74-859B-A13641FF6CB2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AADF793B-6996-4E10-81A6-62BE55EF6D88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADF793B-6996-4E10-81A6-62BE55EF6D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADF793B-6996-4E10-81A6-62BE55EF6D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADF793B-6996-4E10-81A6-62BE55EF6D88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68807B46-18EB-49EA-8B78-94C67A8C0F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68807B46-18EB-49EA-8B78-94C67A8C0F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68807B46-18EB-49EA-8B78-94C67A8C0F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68807B46-18EB-49EA-8B78-94C67A8C0F59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

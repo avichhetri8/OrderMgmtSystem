@@ -1,6 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using OrderMgmtSystem.Infrastructure.OMS;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<OMSContext>(options =>
+{
+    options.UseInMemoryDatabase("InMemoryDB");
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
