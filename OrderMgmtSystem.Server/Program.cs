@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OrderMgmtSystem.Infrastructure.OMS;
+using OrderMgmtSystem.Server.GraphQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services
+    .AddGraphQLServer()
+    .AddQueryType<Query>()
+    .AddFiltering();
 
 var app = builder.Build();
 
@@ -32,6 +38,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapFallbackToFile("/index.html");
+app.MapGraphQL();
 
 app.Run();

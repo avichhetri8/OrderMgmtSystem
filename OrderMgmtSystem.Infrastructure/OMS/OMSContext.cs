@@ -1,11 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OrderMgmtSystem.Core.Entity;
 using OrderMgmtSystem.Core.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrderMgmtSystem.Infrastructure.OMS
 {
@@ -49,6 +44,7 @@ namespace OrderMgmtSystem.Infrastructure.OMS
             modelBuilder.Entity<Address>().HasData(
                 new Address
                 {
+                    Id = Guid.NewGuid(),
                     CustomerId = customerId1,
                     AddressLine1 = "SomePlace",
                     AddressLine2 = "There",
@@ -58,6 +54,7 @@ namespace OrderMgmtSystem.Infrastructure.OMS
                 },
                 new Address
                 {
+                    Id = Guid.NewGuid(),
                     CustomerId = customerId2,
                     AddressLine1 = "Another Place",
                     AddressLine2 = "Here",
@@ -70,6 +67,7 @@ namespace OrderMgmtSystem.Infrastructure.OMS
             modelBuilder.Entity<Order>().HasData(
                 new Order
                 {
+                    Id = Guid.NewGuid(),
                     CustomerId = customerId1,
                     OrderDate = new DateTime(2022, 10, 20),
                     Description = "New Item",
@@ -82,6 +80,7 @@ namespace OrderMgmtSystem.Infrastructure.OMS
                 },
                 new Order
                 {
+                    Id = Guid.NewGuid(),
                     CustomerId = customerId2,
                     OrderDate = new DateTime(2022, 11, 10),
                     Description = "Another New Item",
